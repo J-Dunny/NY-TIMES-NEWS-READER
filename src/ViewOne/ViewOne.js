@@ -11,7 +11,6 @@ const ViewOne = (props) => {
         <section className='view-one'>
             <h1>{oneArticle.title}</h1>
             {image}
-            <img src={oneArticle.multimedia[1].url} />
             <h2>{oneArticle.abstract}</h2>
         </section>
     )
