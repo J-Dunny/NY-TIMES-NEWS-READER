@@ -1,7 +1,7 @@
 import getArticles from '../apiCalls';
 import './App.css';
 import { useEffect, useState } from 'react'
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import HomePage from '../HomePage/HomePage';
 import ViewOne from '../ViewOne/ViewOne';
 function App() {
@@ -16,7 +16,7 @@ console.log(allArticles)
     <div className='app'>
       <Routes>
         <Route path='/' element={<HomePage allArticles={allArticles} />}/>
-        <Route path='/:uri' element={<ViewOne/>} />
+        <Route path='/:uri' element={<ViewOne allArticles={allArticles}/>} />
       </Routes>
     </div>
   );
