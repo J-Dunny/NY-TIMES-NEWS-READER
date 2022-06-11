@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from '../HomePage/HomePage';
 import ViewOne from '../ViewOne/ViewOne';
+import Nav from '../Nav/Nav';
 function App() {
 const [allArticles, setAllArticles] = useState([])
 
@@ -14,6 +15,7 @@ getArticles().then(data => setAllArticles(data.results))
 console.log(allArticles)
   return (
     <div className='app'>
+      <Nav/>
       <Routes>
         <Route path='/' element={<HomePage allArticles={allArticles} />}/>
         <Route path='/:uri' element={<ViewOne allArticles={allArticles}/>} />
