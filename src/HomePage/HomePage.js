@@ -6,7 +6,7 @@ const HomePage = (props) => {
 const [search, setSearch] = useState('')
 
     if (props.allArticles){
-        const filtered = props.allArticles.filter(article => article.title.includes(search) || article.title.toLowerCase().includes(search))
+        const filtered = props.allArticles.filter(article => article.title.toLowerCase().includes(search.toLocaleLowerCase()))
         const articles = filtered.map(article => <ArticleCard article={article} key={article.title}/>)
         
         return (
