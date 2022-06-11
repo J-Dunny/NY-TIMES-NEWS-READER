@@ -12,7 +12,6 @@ useEffect(() => {
 getArticles().then(data => setAllArticles(data.results))
 }, [])
 
-console.log(allArticles)
   return (
     <div className='app'>
       <Nav/>
